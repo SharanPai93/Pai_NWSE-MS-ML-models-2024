@@ -1,0 +1,6 @@
+streamlit
+scikit-learn
+pandas
+geopy
+requests
+country_list
