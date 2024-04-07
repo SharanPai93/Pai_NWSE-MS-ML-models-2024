@@ -16,9 +16,8 @@ from geopy.geocoders import GoogleV3
 #---------------------------------------------------------------------------------------------------------------------------
 
 #Convert Zipcode to Latitude, Longitude
-def zipToLngLat(zipcode,country):
-    #Paste your Google API key into the place where it says "your_client_key" for the code to work
-    geolocator = GoogleV3(api_key='your_client_key')
+def zipToLngLat(zipcode,country,api_key):
+    geolocator = GoogleV3(api_key=api_key)
     locDetails = geolocator.geocode(zipcode,components={'country':country})
     lnglat = {'latitude':locDetails[-1][0],'longitude':locDetails[-1][1]}
     return lnglat
