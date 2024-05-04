@@ -6,7 +6,6 @@ from itertools import chain
 import pandas as pd
 import math
 import numpy as np
-import folium
 from geopy.geocoders import GoogleV3
 
 #------------------------------------------------------------------------------
