@@ -622,11 +622,11 @@ factors and continue with the results.",
             st.write("Loading Model and Algorithm...")
             
             #Load in the model, and convert given data to csv for input to model
-            with open('gradientBoosting_Model.pkl',
+            with open('C:/Users/gopin/Documents/Python creative stuff/2024_Science_Fair/Models/gradientBoosting_Model.pkl',
                       'rb') as f:
                 model = pickle.load(f)
 
-            with open('scaler.pkl',
+            with open('C:/Users/gopin/Documents/Python creative stuff/2024_Science_Fair/Models/scaler.pkl',
                       'rb') as s:
                 scaler = pickle.load(s)
 
@@ -837,7 +837,7 @@ consulting a genetics counselor or doctor about it.***")
         except KeyError:
             st.info("##### ***You chose not to use the Location Factor.***")
 
-        if ss['aqi'] != None:
+        if ss['key']:
             try:
                 tab1,tab2,tab3,tab4,tab5,tab6 = st.tabs(["US AQI",
                                                          "Ozone",
@@ -866,8 +866,13 @@ consulting a genetics counselor or doctor about it.***")
                 #st.write(e) --> for debugging
                 
         else:
-            st.toast('*As you chose not to use the Location feature, no figures \
-    pertaining to AQI or pollutants in your location were created.*')
+            if ss['key'] == None:
+                st.toast('*As you chose not to use the Location feature, no figures \
+        pertaining to AQI or pollutants in your location were created.*')
+
+            elif ss['key'] == False:
+                st.toast('*In order to create location-related figures, you must have a Google API Key, and \
+input it. Because you did not input one, no graphs were created.*')
 
         if probability == -1:
             st.error("#### Sorry, there was an error with the Algorithm. Please \
