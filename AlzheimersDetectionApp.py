@@ -97,6 +97,10 @@ def Vars():
     if 'key' not in ss:
         ss['key'] = None
 
+    if 'Key' not in ss:
+        ss['Key'] = None
+
+
 def set_age():
     ss['age'] = ss['Age']
 
