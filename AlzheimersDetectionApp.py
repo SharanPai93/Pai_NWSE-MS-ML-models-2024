@@ -837,16 +837,16 @@ consulting a genetics counselor or doctor about it.***")
 
             else:
                 if ss['aqi'] < 50:
-                        st.success(f"##### Your city has a ***mild*** additional risk, with AQI levels \
+                    st.success(f"##### Your city has a ***mild*** additional risk, with AQI levels \
         being around {ss['aqi']}.")
-                    elif ss['aqi'] < 100:
-                        st.warning(f"##### Your city has a ***moderate*** additional risk, with AQI levels \
+                elif ss['aqi'] < 100:
+                    st.warning(f"##### Your city has a ***moderate*** additional risk, with AQI levels \
         being around {ss['aqi']}.")
-                    elif ss['aqi'] < 150:
-                        st.warning(f"##### Your city is ***unhealthy*** for sensitive groups. \
+                elif ss['aqi'] < 150:
+                    st.warning(f"##### Your city is ***unhealthy*** for sensitive groups. \
         Excersize caution. The AQI levels are around {ss['aqi']}.")
-                    else:
-                        st.error(f"##### Your city is ***unhealthy.*** \
+                else:
+                    st.error(f"##### Your city is ***unhealthy.*** \
         Excersize caution. The AQI levels are around {ss['aqi']}.")
 
         except KeyError:
