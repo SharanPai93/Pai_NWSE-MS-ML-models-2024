@@ -622,11 +622,11 @@ factors and continue with the results.",
             st.write("Loading Model and Algorithm...")
             
             #Load in the model, and convert given data to csv for input to model
-            with open('C:/Users/gopin/Documents/Python creative stuff/2024_Science_Fair/Models/gradientBoosting_Model.pkl',
+            with open('gradientBoosting_Model.pkl',
                       'rb') as f:
                 model = pickle.load(f)
 
-            with open('C:/Users/gopin/Documents/Python creative stuff/2024_Science_Fair/Models/scaler.pkl',
+            with open('scaler.pkl',
                       'rb') as s:
                 scaler = pickle.load(s)
 
