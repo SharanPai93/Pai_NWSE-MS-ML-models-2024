@@ -837,7 +837,7 @@ consulting a genetics counselor or doctor about it.***")
         except KeyError:
             st.info("##### ***You chose not to use the Location Factor.***")
 
-        if lnglat != None:
+        if ss['aqi'] != None:
             try:
                 tab1,tab2,tab3,tab4,tab5,tab6 = st.tabs(["US AQI",
                                                          "Ozone",
