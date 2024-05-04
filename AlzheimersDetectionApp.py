@@ -94,6 +94,9 @@ def Vars():
     if 'aqi' not in ss:
         ss['aqi'] = None
 
+    if 'key' not in ss:
+        ss['key'] = None
+
 def set_age():
     ss['age'] = ss['Age']
 
