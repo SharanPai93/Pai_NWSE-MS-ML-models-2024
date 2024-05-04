@@ -413,6 +413,7 @@ one [here]({apiUrl}).",
 [here]({AQIurl}), or through a weather app on your phone.",
                                         0,
                                         200)
+            ss['key'] = False
 
         elif 'Yes' in ss['askKey']:
             ss['key'] = True
@@ -524,21 +525,27 @@ if page == pages[4]:
     elif "Unsure" in ss['gene']:
         warning_list.append('You have chosen option \'Unsure\' (Phase 2).')
         checkGene = False
+        
+    if ss['key']:
+        if ss['countryTwoCode'] == None:
+            warning_list.append("You have not chosen a country (Phase 3).")
+            if ss['zipcode'] != None:
+                warning_list.append("You have specified a zipcode, but not a country. \
+    Therefore, both factors will not be considered.")
+                ss['zipcode'] = None
 
-    if ss['countryTwoCode'] == None:
-        warning_list.append("You have not chosen a country (Phase 3).")
-        if ss['zipcode'] != None:
-            warning_list.append("You have specified a zipcode, but not a country. \
-Therefore, both factors will not be considered.")
-            ss['zipcode'] = None
+        if ss['zipcode'] == None:
+            warning_list.append("You have not specified your zipcode.")
+            if ss['countryTwoCode'] != None:
+                warning_list.append("You have specified a country, but not a \
+    zipcode. Therefore, both factors will not be considered.")
+                ss['country'] = None
+                ss['countryTwoCode'] = None
 
-    if ss['zipcode'] == None:
-        warning_list.append("You have not specified your zipcode.")
-        if ss['countryTwoCode'] != None:
-            warning_list.append("You have specified a country, but not a \
-zipcode. Therefore, both factors will not be considered.")
-            ss['country'] = None
-            ss['countryTwoCode'] = None
+    elif ss['key'] == False:
+        if ss['aqi'] == None:
+            warning_list.append("You have not inputted the AQI of your location. Therefore, the \
+Environmental Factors will not be considered.")
 
     #If Participant isn't missing any required info, start results
     if check == True:
@@ -615,11 +622,11 @@ factors and continue with the results.",
             st.write("Loading Model and Algorithm...")
             
             #Load in the model, and convert given data to csv for input to model
-            with open('C:/Users/gopin/Documents/Python creative stuff/2024_Science_Fair/Models/gradientBoosting_Model.pkl',
+            with open('gradientBoosting_Model.pkl',
                       'rb') as f:
                 model = pickle.load(f)
 
-            with open('C:/Users/gopin/Documents/Python creative stuff/2024_Science_Fair/Models/scaler.pkl',
+            with open('scaler.pkl',
                       'rb') as s:
                 scaler = pickle.load(s)
 
