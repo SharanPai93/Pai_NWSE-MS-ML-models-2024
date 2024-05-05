@@ -554,6 +554,10 @@ if page == pages[4]:
             warning_list.append("You have not inputted the AQI of your location. Therefore, the \
 Environmental Factors will not be considered.")
 
+    else:
+        warning_list.append("You have not chosen an option for the Environmental Information \
+(Phase 3)
+
     #If Participant isn't missing any required info, start results
     if check == True:
         if len(warning_list) > 0:
@@ -562,7 +566,8 @@ Environmental Factors will not be considered.")
             with warning_container.container():
                 st.warning('##### Some (optional) factors were left out. You \
 can wait and load results in, then restart, reload the page immediately and \
-    restart, or continue without specifying any of the factors.', icon="⚠️")
+    restart, or continue without specifying any of the factors. They are listed \
+    as follows:', icon="⚠️")
                 count = 1
                 for element in warning_list:
                     st.warning(f"###### {count}. {element}\n")
@@ -932,7 +937,7 @@ unanswered in Phase 1. They are listed as follows:",
 
         st.markdown('#')
 
-        st.warning('##### Additionally, some (optional) factors were left out.',
+        st.warning('##### Additionally, some (optional) factors were left out:',
                    icon="⚠️")
         count = 1
         for element in warning_list:
