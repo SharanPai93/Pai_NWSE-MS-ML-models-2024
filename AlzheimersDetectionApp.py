@@ -556,7 +556,7 @@ Environmental Factors will not be considered.")
 
     else:
         warning_list.append("You have not chosen an option for the Environmental Information \
-(Phase 3)
+(Phase 3)")
 
     #If Participant isn't missing any required info, start results
     if check == True:
