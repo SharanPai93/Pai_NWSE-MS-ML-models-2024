@@ -1,5 +1,5 @@
 # Pai_NWSE-MS-ML-models-2024
-Hello, following my research of ML Models in 2023 (you can find my previous project on ML Models [here](https://github.com/SharanPai93/Pai_NWSE-MS-ML-models-2023)), I have developed another project involving the research of Alzheimer's Dementia (AD). The result of my project is a web-based tool, which can be found online [through this link.](https://alzheimersdetection.streamlit.app/) The code for this tool is shown above, by the file name "AlzheimersDetectionApp.py".  
+Hello, following my research of ML Models in 2023 (you can find my previous project on ML Models [here](https://github.com/SharanPai93/Pai_NWSE-MS-ML-models-2023)), I have developed another project involving the research of Alzheimer's Dementia (AD). The result of my project is a web-based tool, which can be found online [through this link](https://alzheimersdetection.streamlit.app/). The code for this tool is shown above, by the file name "AlzheimersDetectionApp.py".  
 The following overview of my project is included below:
 
 ## Abstract
@@ -62,4 +62,4 @@ Using Streamlit and Python, I programmed a web-based tool from scratch to implem
 
 
 ## Data and Code
-I will add the Code of the Models and Web-Based tool soon. Unfortunately, NACC does not allow its data to be publicly accessible, however, you can make an account to access the data [here](https://naccdata.org/). I have added the Model Code and the Pickle file for it to load it. I also added in the code for the Tool, in which I am using functions and code in the file (I uploaded as "functions.py") that are inspired from [this website.](https://towardsdatascience.com/a-python-tool-for-fetching-air-pollution-data-from-google-maps-air-quality-apis-7cf58a7c63cb)
+I will add the Code of the Models and Web-Based tool soon. Unfortunately, NACC does not allow its data to be publicly accessible, however, you can make an account to access the data [here](https://naccdata.org/). I have added the Model Code and the Pickle file for it to load it. I also added in the code for the Tool, in which I am using functions and code in the file (I uploaded as "functions.py") that are inspired from [this website](https://towardsdatascience.com/a-python-tool-for-fetching-air-pollution-data-from-google-maps-air-quality-apis-7cf58a7c63cb).
