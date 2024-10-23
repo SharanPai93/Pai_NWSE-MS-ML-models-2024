@@ -900,7 +900,7 @@ consulting a genetics counselor or doctor about it.***")
 
             elif ss['key'] == False:
                 st.toast('*In order to create location-related figures, you must have a Google API Key, and \
-input it. Because you did not input one, no graphs were created.*')
+input it.*')
 
         if probability == -1:
             st.error("#### Sorry, there was an error with the Algorithm. Please \
