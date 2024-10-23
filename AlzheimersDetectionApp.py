@@ -45,13 +45,13 @@ def Vars():
         ss['education'] = 16
 
     if 'heartRate' not in ss:
-        ss['heartRate'] = 33
+        ss['heartRate'] = 72
 
     if 'systolicBP' not in ss:
-        ss['systolicBP'] = 70
+        ss['systolicBP'] = 120
 
     if 'diastolicBP' not in ss:
-        ss['diastolicBP'] = 30
+        ss['diastolicBP'] = 80
 
     if 'hypertension' not in ss:
         ss['hypertension'] = None
