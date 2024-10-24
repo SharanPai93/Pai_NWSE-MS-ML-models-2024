@@ -898,9 +898,8 @@ consulting a genetics counselor or doctor about it.***")
                 st.toast('*As you chose not to use the Location feature, no figures \
         pertaining to AQI or pollutants in your location were created.*')
 
-            elif ss['key'] == False:
-                st.toast('*In order to create location-related figures, you must have a Google API Key, and \
-input it.*')
+            #elif ss['key'] == False:
+                #st.toast('*In order to create location-related figures, you must have a Google API Key.*')
 
         if probability == -1:
             st.error("#### Sorry, there was an error with the Algorithm. Please \
