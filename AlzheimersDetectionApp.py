@@ -160,7 +160,7 @@ if page == pages[0]:
     st.header(pages_titles[page],
               divider='gray')
     st.sidebar.write(f'**_{pages_sidebar[page]}_**')
-    st.image(imagename)
+    st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fartificial-intelligence-brain&psig=AOvVaw3R3C3g3UiLw9rTc3V6PFUZ&ust=1729899109103000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCY08SWqIkDFQAAAAAdAAAAABAE")
     st.write("### *Education*")
     st.info("##### Education is taken as an input in years. For example, \
 12 years of education would result in a high school diploma (or GRE), 16 years \
