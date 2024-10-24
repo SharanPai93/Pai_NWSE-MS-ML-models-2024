@@ -160,7 +160,7 @@ if page == pages[0]:
     st.header(pages_titles[page],
               divider='gray')
     st.sidebar.write(f'**_{pages_sidebar[page]}_**')
-    
+    st.image("\Users\gopin\Documents\Python creative stuff\2024_Science_Fair\Streamlit_App\brain")
     st.write("### *Education*")
     st.info("##### Education is taken as an input in years. For example, \
 12 years of education would result in a high school diploma (or GRE), 16 years \
