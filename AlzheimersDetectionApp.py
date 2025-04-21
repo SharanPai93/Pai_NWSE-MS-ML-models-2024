@@ -10,6 +10,22 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 from functions import *
 
+import streamlit as st
+import warnings, pickle
+from sklearn.exceptions import InconsistentVersionWarning
+
+########################################################################################
+# TEMP DEBUG BLOCK - CHECK SKLEARN VERSION
+warnings.simplefilter("error", InconsistentVersionWarning)
+
+try:
+    with open("gradientBoosting_Model.pkl", "rb") as f:
+        model = pickle.load(f)
+except InconsistentVersionWarning as w:
+    st.error(f"The model was pickled under scikit-learn {w.original_sklearn_version}")
+    st.stop()  # Prevent the rest of the app from loading
+
+########################################################################################
 
 #Pages and Descriptions
 pages = ['Glossary',
