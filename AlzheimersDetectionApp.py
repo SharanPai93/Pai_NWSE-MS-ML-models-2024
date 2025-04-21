@@ -10,10 +10,6 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 from functions import *
 
-import streamlit as st
-import warnings, pickle
-from sklearn.exceptions import InconsistentVersionWarning
-
 #Pages and Descriptions
 pages = ['Glossary',
          'Phase 1',
