@@ -1,5 +1,6 @@
 streamlit
 scikit-learn==1.3.0
+numpy==1.24.4
 pandas
 geopy
 requests
