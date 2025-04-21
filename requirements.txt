@@ -1,5 +1,5 @@
 streamlit
-scikit-learn==1.3.0
+scikit-learn==1.2.2
 numpy==1.24.4
 pandas
 geopy
